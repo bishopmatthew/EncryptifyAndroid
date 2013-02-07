@@ -28,7 +28,7 @@ You'll need to add this activity and the DeviceAdminReceiver to your manifest. I
 ```
 
 # Running the encryption check
-Simply call `DeviceEncryptify.ensureDeviceIsEncrypted(context);` in the onCreate() method of any activities with intent filters (including your main activity). If we detect that the device is not encrypted, another activity will start that walks the user through the process of encrypting the device. After the device has been encrypted, the user will be able to use your app normally. But now your data is encrypted!
+Simply call `EncryptifyAndroid.verifyEncryption(activity);` in the onCreate() method of any activities that can receive intents (including your main activity). If we detect that the device is not encrypted, another activity will start that walks the user through the process of encrypting the device. After the device has been encrypted, the user will be able to use your app normally. But now your data is encrypted!
 
 # Extending PerformEncryptionActivity and EADeviceAdminReceiver
 
