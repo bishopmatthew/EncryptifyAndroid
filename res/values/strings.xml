@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EncryptifyAndroid</string>
+    <string name="about_encryption">To use this application, you must enable device encryption.</string>
+    <string name="encrypt_device">Encrypt device</string>
+    <string name="enable_encryption_message">To protect user\'s sensitive data, device encryption must be enabled. </string>
+    <string name="enable_admin_message">To protect user\'s sensitive data, this applicaiton requires device administrative capabilites. </string>
+    <string name="encryption_not_supported">This application requires encryption, but it is not supported on this device. Sorry!</string>
+    <string name="encryption_not_supported_ok">OK</string>
+    <string name="device_encryptify_admin_description">This application requires Admin status in order to ensure that it protects sensitive data.</string>
+
+</resources>
