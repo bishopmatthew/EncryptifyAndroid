@@ -1,3 +1,7 @@
+# Overview
+
+This repository contains an Android library project that simplifies the process making your app require encrypted storage. There are also some ideas about how to extend the project to provide additional security features.
+
 # Protect sensitive data using EncryptifyAndroid
 
 Applications that deal with sensitive data (e.g. data covered by HIPAA, corporate secrets, etc) can increase the level of protection they provide by using the capabilities of the Android  Device Administration API. Once the user has given your application Admin status, you have significant control over the devices various security features, including:
@@ -7,10 +11,6 @@ Applications that deal with sensitive data (e.g. data covered by HIPAA, corporat
 - How many times a password can be entered incorrectly
 - Performing remote wipes of all data from a lost or stolen device
 - Require encryption of the storage area to view or handle your sensitive data.
-
-# What we cover
-
-This repository contains a library that simplifies the process making your app require storage encryption. 
 
 # Cloning the library project
 `git clone https://github.com/bishopmatthew/EncryptifyAndroid.git` the repository to the directory you're working from. In Eclipse, Import -> Android -> Existing Android Code Into Workspace. Check the box next to "DeviceEncryptify" and click finish.
@@ -51,7 +51,7 @@ If you require further control over your user's security settings, you can add E
         </receiver>
 ```
 
-You can control which policies affect your app by adding / removing them from /xml/device_admin_sample. You can then use the method EncryptifyAndroid.enableAdmin(context) to get the user to grant admin status to your app. Then you'll extend the methods in EADeviceAdminReceiver to do the necessary checks. For example, if you want to wipe all data from your app if the user disables your applications admin status (and thus its ability to ensure that sensitive data is protected), override `onDisableRequested(Context context, Intent intent)` to tell them that you're going to wipe the data, and in `onDisabled(Context context, Intent intent)` delete any files stored in your applications /data directory.
+You can control which policies affect your app by adding / removing them from /xml/device_admin_sample. You can then use the method `EncryptifyAndroid.enableAdmin(context)` to get the user to grant admin status to your app. Then you'll extend the methods in EADeviceAdminReceiver to do the necessary checks. For example, if you want to wipe all data from your app if the user disables your applications admin status (and thus its ability to ensure that sensitive data is protected), override `onDisableRequested(Context context, Intent intent)` to tell them that you're going to wipe the data, and in `onDisabled(Context context, Intent intent)` delete any files stored in your applications /data directory.
 
 More information can be found in the Android developer docs:
 http://developer.android.com/guide/topics/admin/device-admin.html
